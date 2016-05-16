@@ -1,0 +1,67 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.androidstudio.sportgps.MainActivity">
+    <item
+        android:id="@+id/action_start"
+        android:orderInCategory="100"
+        android:title="@string/action_start"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_stop"
+        android:orderInCategory="100"
+        android:title="@string/action_stop"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_reset"
+        android:orderInCategory="100"
+        android:title="@string/action_reset"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_map_zoom_fittrack"
+        android:orderInCategory="100"
+        android:title="@string/menu_map_zoom_fittrack"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:title="@string/action_share"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_map_type"
+        android:orderInCategory="100"
+        android:title="@string/menu_map_type"
+        app:showAsAction="never">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/menu_map_type_normal"
+                    android:orderInCategory="100"
+                    android:title="@string/menu_map_type_normal"
+                    android:checked="true"
+                    app:showAsAction="never" />
+                <item
+                    android:id="@+id/menu_map_type_hybrid"
+                    android:orderInCategory="100"
+                    android:title="@string/menu_map_type_hybrid"
+                    app:showAsAction="never" />
+                <item
+                    android:id="@+id/menu_map_type_satellite"
+                    android:orderInCategory="100"
+                    android:title="@string/menu_map_type_satellite"
+                    app:showAsAction="never" />
+                <item
+                    android:id="@+id/menu_map_type_terrain"
+                    android:orderInCategory="100"
+                    android:title="@string/menu_map_type_terrain"
+                    app:showAsAction="never" />
+                <item
+                    android:id="@+id/menu_map_type_none"
+                    android:orderInCategory="100"
+                    android:title="@string/menu_map_type_none"
+                    app:showAsAction="never" />
+            </group>
+        </menu>
+    </item>
+</menu>

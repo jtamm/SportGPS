@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.androidstudio.sportgps.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.androidstudio.sportgps.MainActivity"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="#CCFFFFFF"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/buttonAddWayPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="buttonAddWayPointClicked"
+            android:text="WayPoint"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/buttonCounterReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/buttonAddWayPoint"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/buttonAddWayPoint"
+            android:onClick="buttonCResetClicked"
+            android:text="CReset"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/label_WP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="4dp"
+            android:text="WP:" />
+
+        <TextView
+            android:id="@+id/textview_wpcount"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/label_WP"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/label_WP"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/label_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/label_WP"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/textview_wpcount"
+            android:text="Time:" />
+
+        <TextView
+            android:id="@+id/textview_time"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/label_WP"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/label_time"
+            android:text="0:00" />
+
+        <TextView
+            android:id="@+id/label_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:text="Speed:"
+
+            />
+
+        <TextView
+            android:id="@+id/textview_speed"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="4dp"
+            android:layout_alignBaseline="@id/label_speed"
+            android:layout_toRightOf="@id/label_speed"
+            android:text="0 km/h" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/buttonAddWayPoint">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_marginLeft="4dp"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:text="CReset" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:text="WayPoint" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:text="Total" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="4dp"
+                    android:text="Distance (m)" />
+
+                <TextView
+                    android:id="@+id/textview_creset_distance"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/textview_wp_distance"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/textview_total_distance"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:text="0" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="4dp"
+                    android:text="Line" />
+
+                <TextView
+                    android:id="@+id/textview_creset_line"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/textview_wp_line"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/textview_total_line"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:text="0" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</RelativeLayout>
